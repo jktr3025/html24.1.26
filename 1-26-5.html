@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            perspective: 1000px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+        .rotated{
+            /* transform: rotate3d(x,y,z,45deg); */
+            /* transform: rotate3d(0,1,0,45deg); */
+            /* transform: rotate3d(1,2,-1,192deg); */
+            /* transform: rotate3d(1,1,1,45deg); */
+            transform: rotate3d(0);
+            background-color: lightblue;
+            /* transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+            transition: all 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+        }
+        .rotated:hover{
+            transform: rotate3d(1,2,-1,192deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="normal">normal</div>
+    <div class="rotated">rotated</div>
+</body>
+</html>

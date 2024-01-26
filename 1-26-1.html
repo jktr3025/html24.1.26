@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&family=Poor+Story&display=swap" rel="stylesheet">
+    <!-- 
+        font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Poor Story', system-ui;
+     -->
+     <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Nanum Pen Script', cursive;
+            background-color: #1c1c1c;
+            height: 100vh;
+        }
+        img{
+            width: 100%;
+        }
+        .container{
+            margin: 200px auto;
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .snap{
+            width: 100%;
+            max-width: 230px;
+            /* height: 315px; */
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            position: relative;
+            /* border: 1px solid gold; */
+            overflow: hidden;
+        }
+        .snap img{
+            opacity: 0.9;
+            display: block;
+        }
+        .snap:hover img{
+            opacity: 0.35;
+            filter: blur(3px);
+        }
+        .snap .title{
+            position: absolute;
+            top: 45%;
+            left: 25px;
+            padding: 0px 10px 10px;
+        }
+        .snap .title::before,
+        .snap .title::after{
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 2px;
+            background-color: #fff;
+
+        }
+
+        .snap *,
+        .snap *::before,
+        .snap *::after{
+            transition: all 0.3s ease;
+        }
+
+        .snap .title::before{
+        top: 0;
+        left: 10px;
+        transform: translateX(100%);
+        }
+        .snap .title::after{
+            bottom: 0;
+            right: 10px;
+        transform: translateX(-100%);
+
+        }
+        .snap:hover .title::before,
+        .snap:hover .title::after{
+            transform: translateX(0);
+
+        }
+
+        .snap .title h2,
+        .snap .title h4{
+            text-transform: uppercase;
+        }
+        .snap .title h2{
+            font-size: 30px;
+            font-weight: 200;
+        }
+        .snap .title h4{
+            background-color: #fff;
+            color: #000;
+            padding: 2px 10px;
+        }
+        .snap figcaption{
+            position: absolute;
+            left: 0px;
+            bottom: 100%;
+            font-size: 0.8em;
+            /* padding: 5px 0 5px; */
+            padding: 5px 10px ;
+            text-align: left;
+            letter-spacing: 1.5px;
+            /* border: 1px solid salmon; */
+            opacity: 0;
+        }
+        .snap:hover figcaption{
+            opacity: 1;
+        }
+
+        .snap .title div::before,
+        .snap .title div::after{
+            content: "";
+            width: 2px;
+            height: 300px;
+            background: #fff;
+            position: absolute;
+        }
+        .snap .title div::before{
+            right: 0;
+            top: 10px;
+            transform: translateY(100%);
+        }
+        .snap .title div::after{
+            bottom: 10px;
+            left: 0;
+            transform: translateY(-100%);
+
+        }
+        .snap:hover .title div::before,
+        .snap:hover .title div::after{
+            transform: translateY(0);
+        }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <figure class="snap snap1">
+            <img src="img/sl1.jpg" alt="sl">
+            <div class="title">
+                <div>
+                    <h2>penny</h2>
+                    <h4>tool</h4>
+                </div>
+                <figcaption>
+                    Lorem ipsum dolor sit amet  adipisicing. 
+                </figcaption>
+            </div><!-- title -->
+        </figure><!-- snap1 -->
+
+        <figure class="snap snap2">
+            <img src="img/sl2.jpg" alt="sl">
+            <div class="title">
+                <div>
+                    <h2>penny</h2>
+                    <h4>tool</h4>
+                </div>
+                <figcaption>
+                    Lorem ipsum dolor sit amet  adipisicing.
+                </figcaption>
+            </div><!-- title -->
+        </figure><!-- snap2 -->
+
+        <figure class="snap snap3">
+            <img src="img/sl3.jpg" alt="sl">
+            <div class="title">
+                <div>
+                    <h2>penny</h2>
+                    <h4>tool</h4>
+                </div>
+                <figcaption>
+                    Lorem ipsum dolor sit amet  adipisicing. 
+                </figcaption>
+            </div><!-- title -->
+        </figure><!-- snap3 -->
+    </div><!-- container -->
+</body>
+
+</html>

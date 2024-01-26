@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            font-family: "고딕";
+            background-color: #1c1c1c;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .snap{
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .snap img{
+            width: 100%;
+            display: block;
+        }
+        .snap .des{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .snap .des h3,
+        .snap .des h5{
+            text-transform: uppercase;
+            opacity: 0;
+            position: relative;
+            z-index: 3;
+        }
+
+        .snap .des h3{
+            transform: translateY(-100%);
+            transition: all 0.3s;
+            transition-delay: 0.2s;
+        }
+
+        .snap .des h5{
+            font-style: italic;
+            font-weight: normal;
+            transform: translateY(100%);
+            transition: all 0.3s;
+            transition-delay: 0.3s;
+        }
+        .snap:hover .des h3,
+        .snap:hover .des h5{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .snap a{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            transition: all 0.3s;
+
+        }
+        .snap:hover a{
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="snap snap1">
+            <img src="img/sl4.jpg" alt="sl">
+            <div class="des">
+                <h3>benjamin evalent</h3>
+                <h5>design</h5>
+            </div><!-- des -->
+            <a href="#"></a>
+        </div><!-- snap1 -->
+
+        <div class="snap snap2">
+            <img src="img/sl5.jpg" alt="sl">
+            <div class="des">
+                <h3>benjamin evalent</h3>
+                <h5>design</h5>
+            </div><!-- des -->
+            <a href="#"></a>
+        </div><!-- snap2 -->
+
+        <div class="snap snap3">
+            <img src="img/sl6.jpg" alt="sl">
+            <div class="des">
+                <h3>benjamin evalent</h3>
+                <h5>design</h5>
+            </div><!-- des -->
+            <a href="#"></a>
+        </div><!-- snap3 -->
+
+    </div><!-- container -->
+</body>
+</html>

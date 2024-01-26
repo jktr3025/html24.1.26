@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pacifico&family=Permanent+Marker&family=Shadows+Into+Light&family=Single+Day&display=swap" rel="stylesheet">
+    <!-- 
+font-family: 'Black Ops One', system-ui;
+font-family: 'Pacifico', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Single Day', cursive;
+    -->
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            background-color: #1c1c1c;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .nav{}
+        .nav_link{
+            font-size: 5rem;
+            color: white;
+            font-style: italic;
+            display: grid;
+        }
+        .nav_link_txt{
+            grid-area: 1/1;
+            transition: all 0.7s;
+            transform-origin: 50% 50% 0.4em;
+        }
+        .nav_link_txt:nth-child(1){
+            font-family: 'Pacifico', cursive;
+            font-weight: bold;
+        }
+        .nav_link_txt:nth-child(2){
+            font-family: 'Permanent Marker', cursive;
+            opacity: 0;
+            transform:rotate3d(1,0,0,90deg);
+
+        }
+        .nav_link:hover .nav_link_txt:nth-child(1){
+            opacity: 0;
+            transform:rotate3d(1,-0.3,0,-90deg);
+        }
+        .nav_link:hover .nav_link_txt:nth-child(2){
+            opacity: 1;
+            transform: translateX(3rem) rotate3d(0,0,0,90deg);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#" class="nav_link">
+            <span class="nav_link_txt">CSS</span>
+            <span class="nav_link_txt">CSS</span>
+        </a><!-- nav_link -->
+        <a href="#" class="nav_link">
+            <span class="nav_link_txt">HTML</span>
+            <span class="nav_link_txt">HTML</span>
+        </a><!-- nav_link -->
+        <a href="#" class="nav_link">
+            <span class="nav_link_txt">JAVASCRIPT</span>
+            <span class="nav_link_txt">JAVASCRIPT</span>
+        </a><!-- nav_link -->
+    </nav><!-- nav -->
+
+    <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+    <script lang="java">
+        splitting();
+    </script>
+    <!-- 
+        splitting.js 다운 받아도 되지만
+        그러면 splitting.css도 필요하고, css에서 정해진 클래스를 써야함
+    -->
+</body>
+</html>
